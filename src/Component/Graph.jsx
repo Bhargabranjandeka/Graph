@@ -20,7 +20,7 @@ function Graph() {
   if (!data) return <Loading />
   return <Charts>
     <ResponsiveContainer height={300} width="100%">
-      <Heading>{`Population Graph of United States from 2013-2020`}</Heading>
+      <Heading>{`Population Graph of United States from 2013-2021`}</Heading>
       <BarChart data={data}>
         <CartesianGrid />
         <XAxis dataKey="Nation" />
