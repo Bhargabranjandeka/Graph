@@ -1,6 +1,6 @@
 import { usePopulation } from "../Context/Context"
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
-import Spinner from "./Spinner"
+import Loading from "./Loading"
 import styled from "styled-components"
 
 const Charts = styled.div`
@@ -17,7 +17,7 @@ const Heading = styled.h3`
 function Graph() {
   const { population } = usePopulation()
   const { data } = population
-  if (!data) return <Spinner />
+  if (!data) return <Loading />
   return <Charts>
     <ResponsiveContainer height={300} width="100%">
       <Heading>{`Population Graph of United States from 2013-2020`}</Heading>
